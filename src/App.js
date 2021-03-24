@@ -12,6 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      searchInput:'',
       selected: {},
       pokemon: [],
       name: "",
@@ -72,12 +73,17 @@ class App extends Component {
         {/* <SearchBar/> */}
         <Selection
           id="selection"
+          get={this.getPokemon}
           add={this.addSelected}
           close={this.closePerson}
           edit={this.editName}
           pokemon={this.state.pokemon}
         />
+        <div className='viewerHeader'>
+        <h2 id='viewerHeaderText' >{this.state.selected.name}</h2>
+        </div>
         <div id="viewer">
+          
           <IndividualView
             selected={this.state.selected}
             getSelected={this.getSelected}

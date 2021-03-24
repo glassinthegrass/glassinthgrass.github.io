@@ -1,31 +1,26 @@
 import React, { Component } from "react";
-import axios from 'axios'
-// import { addSelected } from "../../server/Controllers/pokeCtrl";
-// import SearchBar from "./SearchBar.js";
-// import Header from "./Header.js";
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-    };
   handleClick = () => {
     const {pokemon} = this.props
 let newPokemon ={...pokemon}
   this.props.add(newPokemon)
+  this.props.get()
     }
   render() {
-
+    const{pokemon} = this.props
     return (
-      <div id="cardHeader" onClick={this.handleClick}>
+      <section id="cardHeader" onClick={this.handleClick}>
         <div id='cardContent'>
           <img
             className="icon"
-            src={this.props.pokemon.frontPic}
-            alt={this.props.pokemon.name}
+            src='https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg'
+            alt={pokemon.frontShinyPic}
           />
-          #{this.props.pokemon.id} ||| {this.props.pokemon.name}
+          <h4 id='cardText'>#{this.props.pokemon.id} {this.props.pokemon.name}</h4>
+          <img className='icon2' src={pokemon.dreamWorldPic} alt={pokemon.frontShinyPic}/>
         </div>
-      </div>
+      </section>
     );
   }
 }

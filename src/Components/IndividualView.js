@@ -32,11 +32,14 @@ this.setState({isEditing: !this.state.isEditing})
         const { selected } = this.props
         return (
             <div id='view'>
-          
             <div id="selectedPanel">
-              <img src={selected.backPic} alt={selected.name} />
-                    {selected.name} <img src={selected.frontPic} alt={selected.id} />
+              <img src={selected.frontPic} alt={selected.name} />
+              <img src={selected.frontShinyPic} alt={selected.name} />
+                     <img id='mainViewerPic'src={selected.dreamWorldPic} alt={selected.id} />
+                     <img src={selected.frontShinyPic} alt={selected.name} />
+                     <img src={selected.frontPic} alt={selected.id} />
                 </div>
+                
                 <div >
                     {this.state.isEditing ? (<div>
                         <input type='text' value={this.state.name} onChange={e=> this.handleInput(e.target.value)} />
