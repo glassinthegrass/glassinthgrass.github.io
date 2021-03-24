@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import SearchBar from './SearchBar';
 
 class IndividualView extends Component {
   constructor(props) {
       super(props);
       this.state = {
           isEditing: false,
-          name: ''
+          name: 'sdfds'
       }
   }
 componentDidUpdate(){

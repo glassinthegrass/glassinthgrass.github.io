@@ -66,13 +66,17 @@ class App extends Component {
       })
       .catch((err) => console.log(err));
 };
-
+handleSearchInput=(e)=> {
+  this.setState({searchInput: e })
+}
   render() {
+    console.log(this.state.searchInput)
     return (
       <div className="App">
-        <SearchBar/>
+        <SearchBar searchInput={this.handleSearchInput} input={this.state.searchInput}/>
         <Selection
           id="selection"
+          input={this.state.searchInput}
           get={this.getPokemon}
           add={this.addSelected}
           close={this.closePerson}

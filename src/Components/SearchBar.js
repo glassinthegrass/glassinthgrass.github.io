@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { Component } from "react";
 
-function SearchBar(props) {
-    return(
-        <div id='searchBar'>
-            <h3 id='searchBarText'>Pokedex</h3> <input type='search' placeholder='Type Here'/>
-            </div>
-        
-    )
+class SearchBar extends Component {
+  render() {
+    return (
+      <div id="searchBar">
+        <h3 id="searchBarText">Pokedex</h3>
+        <input
+          type="search"
+          placeholder="Type Here"
+          value={this.props.input}
+          ƒonChange={(e) => this.props.searchInput(e.target.value)}
+        />
+      </div>
+    );
+  }
 }
-export default SearchBar
+export default SearchBar;

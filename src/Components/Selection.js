@@ -7,7 +7,11 @@ import Card from './Card'
 class Selection extends Component {
   render() {
       const {pokemon} = this.props
-    let mappedPokemon = pokemon.map((pokemon, i) => {
+
+
+    let mappedPokemon = pokemon
+
+    .map((pokemon, i) => {
       return(
         <section>
       <Card key={i} pokemon={pokemon} add={this.props.add} get={this.props.get} />
