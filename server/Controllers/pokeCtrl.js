@@ -35,9 +35,10 @@ module.exports = {
     res.status(200).send(pokemon);
 },
   addSelected: (req, res) => {
-    const { pokemon } = req.body;
-    selected = {...pokemon}
-    res.status(200).send(selected);
+    let idx = pokemon.findIndex(e => e.id === +req.body.pokemon.id)
+    selected = {...req.body.pokemon}
+    pokemon.splice(idx,1)
+    res.status(200).send(selected,pokemon);
   },
 
   getSelected: (req, res) => {
@@ -47,12 +48,17 @@ module.exports = {
   editSelected: (req, res) => {
     const { name } = req.body;
     selected.name = name
-    res.status(200).send(selected);
+    let index = pokemon.find(ele => ele.id === selected.id)
+    pokemon[index].name = name
+    res.status(200).send(pokemon[index]);
   },
   clear: (req, res) => {
-    pokemon.unshift(selected);
-    let clear = {}
-    selected ={...clear};
+  pokemon.splice(0,0,selected)
+  selected = {}
     res.status(200).send(selected);
   },
+  close:(req,res) => {
+      selected ={}
+      res.status(200).send(selected)
+  }
 };

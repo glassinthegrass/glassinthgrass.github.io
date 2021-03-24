@@ -4,7 +4,6 @@ class IndividualView extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          selected: {},
           isEditing: false,
           name: ''
       }
@@ -25,13 +24,14 @@ this.setState({isEditing: !this.state.isEditing})
     }
     handleInput = (e) => {
         this.setState({ name: e })
+        console.log(this.state.name)
     }
 
     render() {
     console.log(this.props.selected)
         const { selected } = this.props
         return (
-            <div >
+            <div id='view'>
           
             <div id="selectedPanel">
               <img src={selected.backPic} alt={selected.name} />
@@ -39,16 +39,15 @@ this.setState({isEditing: !this.state.isEditing})
                 </div>
                 <div >
                     {this.state.isEditing ? (<div>
-                        <input value={this.state.name} onChange={e => this.setState({name : e.target.value})} />
+                        <input type='text' value={this.state.name} onChange={e=> this.handleInput(e.target.value)} />
                         <button onClick={() => this.handleEdit(selected.id)}>Submit</button>
                     </div>
                     ) : (
                         <div>
-                            <p>{this.state.name}</p>
                             <button onClick={this.handleToggle}>Edit</button>
                         </div>
                     )}
-                    <button onClick={this.handleToggle}>Clear</button>
+                    <button onClick={this.handleClear}>Add</button>
                     </div>
               </div>
         );

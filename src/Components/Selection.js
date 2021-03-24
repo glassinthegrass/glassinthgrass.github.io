@@ -19,7 +19,6 @@ class Selection extends Component {
   });
     return (
       <div className="list">
-        <h3>the gang</h3>
         {mappedPokemon}
       </div>
     );

@@ -23,6 +23,7 @@ class App extends Component {
     this.getPokemon();
     console.log(this.state.pokemon)
   }
+
   addSelected = (pokemon) => {
     axios
       .post(`/api/selected`,{pokemon:pokemon})
@@ -49,10 +50,9 @@ class App extends Component {
   editName = (id, newName) => {
     let body = { name: newName };
     axios
-      .put(`/api/selected/${id}`, body)
+      .put(`/api/selected`, body)
       .then((res) => {
-        this.setState({ selected: res.data.selected });
-        this.setState({ pokemon: res.data.pokemon });
+        this.setState({ selected: res.data})
       })
       .catch((err) => console.log(err));
   };
@@ -60,14 +60,16 @@ class App extends Component {
     axios
       .delete(`/api/selected`)
       .then((res) => {
-        this.setState({ pokemon: res.data });
+        this.setState({ selected: res.data });
+         this.getPokemon()
       })
       .catch((err) => console.log(err));
-  };
+};
 
   render() {
     return (
       <div className="App">
+        {/* <SearchBar/> */}
         <Selection
           id="selection"
           add={this.addSelected}

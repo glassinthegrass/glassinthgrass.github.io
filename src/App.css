@@ -16,9 +16,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -40,22 +40,17 @@
 
 #cardHeader{
   height: 5vh;
-  width: 40vw;
-  background-color: purple;
+  width: 39vw;
+  background-color: rgba(128, 0, 128, 0.637);
+  color:turquoise;
   border-radius: 50px 50px 50px 50px;
-  margin-left: 5vw;
+  margin-top:10px;
   margin-right: 10vw;
-  margin-bottom: 10px;
+  margin-left:1vw;
  display:flex;
   justify-content: flex-start;
   flex-direction: column;
   float:left
-
-}
-#cardContent{
-  float:left;
-  display:flex;
-  justify-content: left;
 
 }
 .searchBar {
@@ -73,13 +68,11 @@
   float: top;
 }
 
-.searchText {
-margin-top: -1px
-}
 
 #cardHeaderText{
   position: relative;
   margin-left: 10px;
+  color:whitesmoke
 }
 .icon{
  width: 50px;
@@ -90,24 +83,33 @@ display:flex
 }
 .list{
   width: 40vw;
+  Height: 56.5vw;
+  overflow: scroll;
 }
 
 #viewer{
-  width: 40vw;
-  height: 75vh;
-  background-color: blue;
-  border-radius: 50px 50px 50px 50px;
-  display: flex;
-  justify-content:center;
-  flex-direction: row;
-  
+  position:relative;
+  top:0;
+  left:50vw;
+padding:30px;
+border-radius: 50px 50px 50px 50px;
+  background-color: rgba(9, 140, 228, 0.829);
+  font-size: 20px;
+  width:40vw;
+  margin-top: -36%;
 }
 
 #selectedPanel{
 display: flex;
 justify-content: center;
 
+
 }
 #selectedHeader{
   width: 10vw;
 }
+body {
+  background-image: url("https://eskipaper.com/images/pokemon-backgrounds-9.jpg");
+  background-color: #cccccc;
+  height:50vh;
+ }
