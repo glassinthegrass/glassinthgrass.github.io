@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,78 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#cardHeader{
+  height: 5vh;
+  width: 40vw;
+  background-color: purple;
+  border-radius: 50px 50px 50px 50px;
+  margin-left: 5vw;
+  margin-right: 10vw;
+  margin-bottom: 10px;
+ display:flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  float:left
+
+}
+#cardContent{
+  float:left;
+  display:flex;
+  justify-content: left;
+
+}
+.searchBar {
+  background-color: black;
+  color: pink;
+  display: inline-flex;
+  height: 3vh;
+  float: right;
+  width: 100%
+}
+
+.header {
+  background-color: coral;
+  height: 5vh;
+  float: top;
+}
+
+.searchText {
+margin-top: -1px
+}
+
+#cardHeaderText{
+  position: relative;
+  margin-left: 10px;
+}
+.icon{
+ width: 50px;
+ margin-top: -2px;
+margin-left: -12px;
+float:left;
+display:flex
+}
+.list{
+  width: 40vw;
+}
+
+#viewer{
+  width: 40vw;
+  height: 75vh;
+  background-color: blue;
+  border-radius: 50px 50px 50px 50px;
+  display: flex;
+  justify-content:center;
+  flex-direction: row;
+  
+}
+
+#selectedPanel{
+display: flex;
+justify-content: center;
+
+}
+#selectedHeader{
+  width: 10vw;
 }
