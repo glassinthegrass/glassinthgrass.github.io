@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SearchBar from './SearchBar';
 
 class IndividualView extends Component {
   constructor(props) {

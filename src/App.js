@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import SearchBar from "./Components/SearchBar.js";
+import SearchBar from "./Components/SearchBar.js";
 import Selection from "./Components/Selection.js";
 import IndividualView from "./Components/IndividualView.js";
 
@@ -70,7 +70,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <SearchBar/> */}
+        <SearchBar/>
         <Selection
           id="selection"
           get={this.getPokemon}
