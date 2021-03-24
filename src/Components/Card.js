@@ -10,7 +10,7 @@ let newPokemon ={...pokemon}
   render() {
     const{pokemon} = this.props
     return (
-      <section id="cardHeader" onClick={this.handleClick}>
+      <section id="cardHeader" onClick={this.handleClick}><a>
         <div id='cardContent'>
           <img
             className="icon"
@@ -20,7 +20,7 @@ let newPokemon ={...pokemon}
           <h4 id='cardText'>#{this.props.pokemon.id} {this.props.pokemon.name}</h4>
           <img className='icon2' src={pokemon.dreamWorldPic} alt={pokemon.frontShinyPic}/>
         </div>
-      </section>
+      </a></section>
     );
   }
 }

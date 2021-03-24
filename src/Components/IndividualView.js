@@ -48,10 +48,10 @@ this.setState({isEditing: !this.state.isEditing})
                     </div>
                     ) : (
                         <div>
-                            <button onClick={this.handleToggle}>Edit</button>
+                            <button onClick={this.handleToggle}><a>Edit</a></button>
                         </div>
                     )}
-                    <button onClick={this.handleClear}>Add</button>
+                    <button onClick={this.handleClear}><a>Add</a></button>
                     </div>
               </div>
         );

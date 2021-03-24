@@ -47,7 +47,7 @@
 .icon{
 height:7vh;
 margin-left:6px;
-margin-top: 0.5vh;
+margin-top: -0.6vh;
 float:left;
 display:flex
 }
@@ -72,8 +72,6 @@ border:2px solid #07cfd6;
 #selectedPanel{
 display: flex;
 justify-content:center;
-
-
 }
 
 body {
@@ -115,4 +113,16 @@ margin-top:8px;
  }
  #viewerHeaderText{
    margin-top: -1.5vh;
+ }
+
+ button a:hover {
+   background-color: crimson;
+   color:darkslategrey
+ }
+ section a:hover{
+background-color: rgba(0, 255, 255, 0.747);
+color: rgb(57, 0, 97);
+border-radius: 40px 40px 40px 40px;
+height:6vh;
+margin-top: 1vh;
  }
